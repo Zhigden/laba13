@@ -1,6 +1,8 @@
 <head>
+  <link rel="stylesheet" href="https://github.com/saryunadab/lab14/blob/main/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
 </head>
+
 <div class="main" id = "main">
   <div class="head">
     <img class="Avatar" crossorigin="anonymous" src="https://s3-alpha-sig.figma.com/img/327e/1027/27f8803676f1e5a26c4e31dbaf5cba56?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dmz4usL1W9Mv2kt39T2uUF8KVax~jdQIWTkS5Vw0Xy0E0MGBb~G~pmkdzR~bkxjQvuwEy0XWWfH2mlyCJEcK8rqZyM-gdMQTwfQ0443LyxOfvTEJEC80jkITBh44uss7DrXpK46kRZHyqqZdKY1CU7S7hmu49~76oV3phiQQwKEdI2NblvR~Hws02lgowDFW-abkc8nJcc6mpboV77sXolJlGw8575FpO1M5F2DaoeV5FkEnnH3jbTThgPO3NLc6495zSSr4i6PY5WodWcoi-KanZv3WOgrHfPFN5HIR2hBxiji5HjNOXiQ~dwhfbDJUYIeL3Cf433ruWAEh-zbgew__" />
@@ -337,7 +339,24 @@
             srkarthik.designscape@gmail.com
           </div>
         </div>
-
+      <script>
+               function captureImage() {
+            const element = document.getElementById('main');
+            html2canvas(element, {
+                useCORS: true,
+                scale: 2
+            }).then((canvas) => {
+                const image = canvas.toDataURL('image/png');
+                const link = document.createElement('a');
+                link.href = image;
+                link.download = 'screenshot.png';
+                link.click();
+            });
+        }
+      </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xdomain/0.8.2/xdomain.min.js"></script>
       </div>
     </div>
   </div>
